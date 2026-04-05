@@ -180,7 +180,8 @@ export default function EcoTracker() {
 
         {/* Desktop links */}
         <div style={{display:"flex", gap:36, alignItems:"center"}}>
-        
+        <a className="nav-link" style={{color:"#10490a", fontWeight:700}}>Login</a>
+          
         </div>
       </nav>
 

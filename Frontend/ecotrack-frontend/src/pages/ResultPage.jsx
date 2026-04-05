@@ -1,16 +1,21 @@
 import logoImg from "../assets/Untitled (1).png";
 import forestImg from "../assets/forest_by_OGQ__1_-removebg-preview.png";
 import plantImg from "../assets/newimag.png";
+import leafImg from "../assets/download__13_-removebg-preview.png";
 
 export default function EcoTrackerDashboard() {
   return (
     <div style={{
       position: "relative",
-      width: "1400px",
-      height: "1000px",
+     width: "100%",
+  minHeight: "100vh",
       background: "#fff",
+      display: "flex",
+justifyContent: "center",
+alignItems: "center",
       fontFamily: "sans-serif",
-      overflow: "hidden",
+      overflow: "visible",
+        paddingBottom: "120px", 
       border: "10px solid #9ACD9A",
       borderRadius: "8px",
     }}>
@@ -50,14 +55,13 @@ export default function EcoTrackerDashboard() {
 
       {/* ── GREEN RECTANGLE CARD ── */}
       <div style={{
-        position: "absolute",
-        left: 85,
-        top: 100,
-        width: "1223px",
-        height: "783px",
-        background: "#CCF3CC",
-        borderRadius: "4px",
-      }}>
+  width: "1223px",
+  height: "783px",
+  background: "#CCF3CC",
+  borderRadius: "4px",
+  margin: "120px auto 0 auto", 
+  position: "relative"
+}}>
 
         {/* YOUR DAILY RESULT heading */}
         <div style={{
@@ -116,13 +120,21 @@ export default function EcoTrackerDashboard() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            gap: "8px",
+            gap: "1px",
           }}>
             {/* Leaf icon */}
-            <svg width="60" height="50" viewBox="0 0 60 50" fill="none">
-              <path d="M5 45 Q15 5 55 3 Q50 42 5 45Z" fill="#299825"/>
-              <path d="M5 45 Q30 24 55 3" stroke="#1a6b14" strokeWidth="2" fill="none"/>
-            </svg>
+           <img
+  src={leafImg}
+  alt="leaf"
+  style={{
+    width: "85px",
+    height: "75px",
+    objectFit: "contain",
+    filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))"
+  }}
+/>
+
+
             {/* 25 kg */}
             <div style={{
               fontFamily: "'Goldman', sans-serif",
@@ -148,7 +160,7 @@ export default function EcoTrackerDashboard() {
         }}>
 
           {/* Transportation row */}
-          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "30px" }}>
             {/* Car icon */}
             <svg width="52" height="36" viewBox="0 0 52 36" fill="none">
               <rect x="4" y="10" width="44" height="18" rx="5" fill="none" stroke="#B8860B" strokeWidth="2.5"/>
@@ -170,7 +182,7 @@ export default function EcoTrackerDashboard() {
           </div>
 
           {/* Electricity row */}
-          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "42px" }}>
             {/* Plug icon */}
             <svg width="44" height="50" viewBox="0 0 44 50" fill="none">
               <rect x="16" y="0" width="12" height="20" rx="3" fill="none" stroke="#2F047E" strokeWidth="2.5"/>
@@ -197,7 +209,7 @@ export default function EcoTrackerDashboard() {
         <div style={{
           position: "absolute",
           left: 130,
-          bottom: 40,
+          bottom: 90,
           fontFamily: "'Goldman', sans-serif",
           fontWeight: 400,
           fontSize: "52px",
@@ -214,8 +226,8 @@ export default function EcoTrackerDashboard() {
         alt="plant"
         style={{
           position: "absolute",
-          width: "228px",
-          height: "228px",
+          width: "288px",
+          height: "288px",
           left: "-1px",
           top: "754px"
         }}
@@ -227,8 +239,8 @@ export default function EcoTrackerDashboard() {
         alt="watering"
         style={{
           position: "absolute",
-          width: "324px",
-          height: "324px",
+          width: "389px",
+          height: "389px",
           left: "1110px",
           top: "693px",
           opacity: 0.8
